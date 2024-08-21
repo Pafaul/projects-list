@@ -2,14 +2,21 @@ import { JobsEnum } from "~/types";
 import { undefined } from "zod";
 import {
   BluelightIcon,
+  BluelightLargeIcon,
   HodlTreeIcon,
+  HodlTreeLargeIcon,
   IzzzioIcon,
+  IzzzioLargeIcon,
   NoWorkplaceIcon,
+  NoWorkplaceLargeIcon,
   SvoiIcon,
+  SvoiLargeIcon,
   TokenStationIcon,
+  TokenStationLargeIcon,
 } from "~/components/icons/workplace-icons";
 import {
   BluelightDescription,
+  FuturestateDescription,
   HodlTreeDescription,
   IzzzioDescription,
   NoDescriptionYet,
@@ -19,25 +26,37 @@ import {
   VniinsDescription,
 } from "~/components/descriptions/descriptions";
 import {
+  AzureIcon,
   BashIcon,
+  BitBucketIcon,
   DebianIcon,
   DockerIcon,
   EthereumIcon,
   EverscaleIcon,
   GithubIcon,
+  GitLabIcon,
   HardhatIcon,
   KubernetesIcon,
+  KustomizeIcon,
+  LensIcon,
   MongoDBIcon,
   NestJSIcon,
   NodeJSIcon,
+  OpenTelemetryIcon,
+  PrometheusIcon,
+  PythonIcon,
+  SentryIcon,
   SolidityIcon,
   TheGraphIcon,
   TronIcon,
+  TSLangIcon,
   UbuntuIcon,
 } from "~/components/icons/tech-icons";
+import React from "react";
 
 export type JobDescription = {
   icon: () => React.ReactNode;
+  largeIcon: () => React.ReactNode;
   position: string;
   startDate: Date;
   endDate?: Date;
@@ -48,29 +67,43 @@ export type JobDescription = {
 export const jobs: Record<JobsEnum, JobDescription | undefined> = {
   Futurestate: {
     icon: NoWorkplaceIcon,
+    largeIcon: NoWorkplaceLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2024-03-01"),
-    description: NoDescriptionYet,
-    stack: [],
+    description: FuturestateDescription,
+    stack: [
+      EthereumIcon,
+      SolidityIcon,
+      HardhatIcon,
+      TheGraphIcon,
+      DockerIcon,
+      NodeJSIcon,
+      TSLangIcon,
+      UbuntuIcon,
+      GitLabIcon,
+    ],
   },
   HodlTree: {
     icon: HodlTreeIcon,
+    largeIcon: HodlTreeLargeIcon,
     position: "Blockchain developer",
-    startDate: new Date("2022-02"),
+    startDate: new Date("2022-01"),
     endDate: new Date("2022-05"),
     description: HodlTreeDescription,
     stack: [EthereumIcon, SolidityIcon, HardhatIcon, GithubIcon],
   },
   IZZZIO: {
     icon: IzzzioIcon,
+    largeIcon: IzzzioLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2020-03"),
-    endDate: new Date("2020-05"),
+    endDate: new Date("2020-06"),
     description: IzzzioDescription,
-    stack: [NodeJSIcon, GithubIcon],
+    stack: [NodeJSIcon, BashIcon, GithubIcon],
   },
   MyOwn: {
     icon: NoWorkplaceIcon,
+    largeIcon: NoWorkplaceLargeIcon,
     position: "CEO & CTO & The one and only employee",
     startDate: new Date("1999-09-23"),
     description: NoDescriptionYet,
@@ -78,6 +111,7 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
   },
   SVOIdev: {
     icon: SvoiIcon,
+    largeIcon: SvoiLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2020-09"),
     endDate: new Date("2022-02"),
@@ -93,6 +127,7 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
   },
   Tokenstation: {
     icon: TokenStationIcon,
+    largeIcon: TokenStationLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2021-09"),
     endDate: new Date("2024-01"),
@@ -103,6 +138,7 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
       SolidityIcon,
       HardhatIcon,
       NodeJSIcon,
+      PythonIcon,
       MongoDBIcon,
       DockerIcon,
       UbuntuIcon,
@@ -111,6 +147,7 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
   },
   Bluelight: {
     icon: BluelightIcon,
+    largeIcon: BluelightLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2022-11-25"),
     endDate: new Date("2024-02-29"),
@@ -118,17 +155,25 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
     stack: [
       EthereumIcon,
       SolidityIcon,
+      HardhatIcon,
       TheGraphIcon,
       NestJSIcon,
-      HardhatIcon,
+      OpenTelemetryIcon,
+      SentryIcon,
+      PrometheusIcon,
       BashIcon,
       DockerIcon,
       KubernetesIcon,
+      KustomizeIcon,
+      LensIcon,
+      AzureIcon,
       UbuntuIcon,
+      BitBucketIcon,
     ],
   },
   Vniins: {
     icon: NoWorkplaceIcon,
+    largeIcon: NoWorkplaceLargeIcon,
     position: "DevOps engineer",
     startDate: new Date("2018-12"),
     endDate: new Date("2022-06"),

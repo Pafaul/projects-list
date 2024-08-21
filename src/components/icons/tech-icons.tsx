@@ -1,7 +1,7 @@
 import BaseIcon from "~/components/icons/base-icon";
 
 function TechIcon({ src, alt }: { src: string; alt: string }) {
-  return <BaseIcon src={src} alt={alt} w={50} h={50} />;
+  return <BaseIcon src={src} alt={alt} w={50} h={50} className="max-h-16" />;
 }
 
 // TODO: Pics to add
@@ -16,11 +16,23 @@ function TechIcon({ src, alt }: { src: string; alt: string }) {
 // telegram.svg
 
 export function NoTechIcon() {
-  return <TechIcon src="/404-tech-icon.png" alt="No icon" />;
+  return <h1>¯\_(ツ)_/¯</h1>;
+}
+
+export function AzureIcon() {
+  return <TechIcon src="/azure.svg" alt="Azure" />;
 }
 
 export function BashIcon() {
   return <TechIcon src="/bash.svg" alt="Bash" />;
+}
+
+export function BitBucketIcon() {
+  return <TechIcon src="/bitbucket.svg" alt="BitBucket" />;
+}
+
+export function GitLabIcon() {
+  return <TechIcon src="/gitlab.svg" alt="GitLab" />;
 }
 
 export function DebianIcon() {
@@ -51,6 +63,26 @@ export function KubernetesIcon() {
   return <TechIcon src="/k8s.svg" alt="Kubernetes" />;
 }
 
+export function LensIcon() {
+  return <TechIcon src="/lens.svg" alt="Lens" />;
+}
+
+export function PrometheusIcon() {
+  return <TechIcon src="/prometheus.svg" alt="Prometheus" />;
+}
+
+export function OpenTelemetryIcon() {
+  return <TechIcon src="/opentelemetry.svg" alt="OpenTelemetry" />;
+}
+
+export function KustomizeIcon() {
+  return <TechIcon src="/kustomize.png" alt="Kustomize" />;
+}
+
+export function SentryIcon() {
+  return <TechIcon src="/sentry.svg" alt="Sentry" />;
+}
+
 export function MongoDBIcon() {
   return <TechIcon src="/mongodb.svg" alt="MongoDB" />;
 }
@@ -69,6 +101,10 @@ export function NestJSIcon() {
 
 export function NodeJSIcon() {
   return <TechIcon src="/nodejs-icon.svg" alt="NodeJS" />;
+}
+
+export function PythonIcon() {
+  return <TechIcon src="/python.svg" alt="Python" />;
 }
 
 export function HardhatIcon() {

@@ -5,11 +5,21 @@ export default function BaseIcon({
   alt,
   w,
   h,
+  className,
 }: {
   src: string;
   alt: string;
   w: number;
   h: number;
 }) {
-  return <Image src={src} alt={alt} width={w} height={h} className="rounded" />;
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={w}
+      height={h}
+      className={`rounded ${className}`}
+      style={{ maxWidth: w, maxHeight: h }}
+    />
+  );
 }
