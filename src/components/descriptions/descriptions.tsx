@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardBody, CardHeader as CHeader } from "@nextui-org/card";
 import { Divider, Link } from "@nextui-org/react";
+import { Base } from "next/dist/client/components/react-dev-overlay/internal/styles/Base";
 
 export function SignedAnNDA() {
   return <text>Signed an NDA, cannot tell</text>;
@@ -30,6 +31,134 @@ function BaseGrid({
 
 function CardHeader({ children }: { children: React.ReactNode }) {
   return <CHeader className="justify-center">{children}</CHeader>;
+}
+
+export function MyOwnDescription() {
+  return (
+    <BaseDescription>
+      <h1>Building stuff for myself</h1>
+      <BaseGrid>
+        <Card>
+          <CardHeader>
+            <h1>This website :)</h1>
+          </CardHeader>
+          <CardBody>
+            <p>
+              This page is the second version of the page where I collect
+              information on what I've done so far
+            </p>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h1>Learning projects</h1>
+          </CardHeader>
+          <CardBody>
+            <p>
+              Until recently most of the projects that I was a part of required
+              learning a lot of new technologies, that I didn't know how to deal
+              with
+            </p>
+            <br />
+            <p>
+              This lead to creating a lot of micro learning projects that helped
+              me to get a grasp of what is going on and how i can use it at my
+              work, most of those projects are not published and are unavailable
+              for the public
+            </p>
+            <br />
+            <p>
+              Some of the projects include NestJS, Go, Redis, RabbitMQ, Svelte,
+              React, NextJS, and a little bit more
+            </p>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h1>Huff hackathon 2023</h1>
+          </CardHeader>
+          <CardBody>
+            <p>
+              This one is cool one, because it allowed me to get better with EVM
+              assembly and try to make something without any guardrails
+            </p>
+            <br />
+            <p>
+              I've being interested in EVM assembly for quite some time, and
+              this was a perfect opportunity for a deeper dive
+            </p>
+            <br />
+            <p>
+              Fun fact: the hackathon was hosted using Optimism network, which
+              did not include all the new opcodes, to be exact it didn't have
+              PUSH0 opcode, which adds zero to the stack. How do i know this?
+              I've spent 3 hours trying to understand why my code isn't working,
+              before finding out that the problem was with this opcode.
+              Hackathon was hosted in 24 non-stop format, but after this one I
+              was not ready to continue unfortunately.
+            </p>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h1>NeoVim extension for usage counters</h1>
+          </CardHeader>
+          <CardBody>
+            <p>
+              When I started using NeoVim (I use Vim btw, just joking, I use
+              Jetbrains IDEs and very happy with it), one of the problems was
+              that I didn't know amount of references to a class/constant
+            </p>
+            <br />
+            <p>
+              After a quick search I found an extension that was able to solve
+              the problem, but it didn't work correctly.
+            </p>
+            <br />
+            <p>
+              So I've forked it, modified it in a way I wanted and now it's
+              useful for me from time to time
+            </p>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h1>Snake in GO</h1>
+          </CardHeader>
+          <CardBody>
+            <p>What can you build to learn some new language? Snake game</p>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h1>Event gathering service in GO</h1>
+          </CardHeader>
+          <CardHeader>
+            <p>
+              I decided to start learning Go, the first idea for a backend
+              service was to create event gathering service, so here it is
+            </p>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h1>Http service monitor with Telegram notifications</h1>
+          </CardHeader>
+          <CardBody>
+            <p>
+              The idea was to create a generic solution for monitoring http
+              endpoints with notifications that will be delivered to me via
+              convenient medium for me (in Telegram), so here's a http service
+              monitor with Telegram notifications :)
+            </p>
+          </CardBody>
+        </Card>
+        <Card className="flow flow-row items-center justify-center">
+          <h1>To be continued...</h1>
+        </Card>
+      </BaseGrid>
+    </BaseDescription>
+  );
 }
 
 export function FuturestateDescription() {
@@ -723,10 +852,6 @@ export function SvoiDescription() {
       </BaseGrid>
     </BaseDescription>
   );
-}
-
-export function MyOwnDescription() {
-  return <div></div>;
 }
 
 export function IzzzioDescription() {

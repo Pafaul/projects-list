@@ -25,6 +25,7 @@ export default function ShortInfoDescription({
     <Card>
       <CardBody className="flex flex-row items-center justify-center gap-3">
         {jobInfo.largeIcon()}
+        <div className="pr-5" />
 
         <div className="flex flex-col items-center justify-center">
           <h1>{workplace}</h1>

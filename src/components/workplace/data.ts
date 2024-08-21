@@ -19,8 +19,8 @@ import {
   FuturestateDescription,
   HodlTreeDescription,
   IzzzioDescription,
+  MyOwnDescription,
   NoDescriptionYet,
-  SignedAnNDA,
   SvoiDescription,
   TokenstationDescription,
   VniinsDescription,
@@ -106,7 +106,7 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
     largeIcon: NoWorkplaceLargeIcon,
     position: "CEO & CTO & The one and only employee",
     startDate: new Date("1999-09-23"),
-    description: NoDescriptionYet,
+    description: MyOwnDescription,
     stack: [],
   },
   SVOIdev: {
