@@ -18,7 +18,7 @@ export default function WorkplaceInfo({ workplace }: { workplace: JobsEnum }) {
   return (
     <Card>
       <CardHeader className="gap-3">
-        {jobInfo.icon()}
+        {jobInfo.icon({ variant: "medium" })}
         <div className="flex flex-col gap-3">
           <h1>{workplace}</h1>
           <p>
@@ -30,13 +30,15 @@ export default function WorkplaceInfo({ workplace }: { workplace: JobsEnum }) {
       </CardHeader>
       <Divider />
       <CardBody>{jobInfo.description()}</CardBody>
-      <CardFooter className="flex flex-row items-center justify-evenly border-2">
-        {jobInfo.stack.map((val, index) => (
-          <div key={index} className="w-16 p-2">
-            {val()}
-          </div>
-        ))}
-      </CardFooter>
+      {jobInfo.stack.length > 0 && (
+        <CardFooter className="flex flex-row items-center justify-evenly border-2">
+          {jobInfo.stack.map((val, index) => (
+            <div key={index} className="w-16 p-2">
+              {val()}
+            </div>
+          ))}
+        </CardFooter>
+      )}
     </Card>
   );
 }

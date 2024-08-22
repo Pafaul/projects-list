@@ -68,8 +68,8 @@ export function MyOwnDescription() {
             </p>
             <br />
             <p>
-              Some of the projects include NestJS, Go, Redis, RabbitMQ, Svelte,
-              React, NextJS, and a little bit more
+              This way I've being learning Go, NestJS, React, Svelte, Huff,
+              Redis, RabbitMQ, Svelte, React, NextJS, Kubernetes, ...
             </p>
           </CardBody>
         </Card>

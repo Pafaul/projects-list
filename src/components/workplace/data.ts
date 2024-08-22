@@ -2,17 +2,14 @@ import { JobsEnum } from "~/types";
 import { undefined } from "zod";
 import {
   BluelightIcon,
-  BluelightLargeIcon,
   HodlTreeIcon,
-  HodlTreeLargeIcon,
+  IconVariant,
   IzzzioIcon,
-  IzzzioLargeIcon,
+  MeWorkplaceIcon,
   NoWorkplaceIcon,
-  NoWorkplaceLargeIcon,
+  StatecraftIcon,
   SvoiIcon,
-  SvoiLargeIcon,
   TokenStationIcon,
-  TokenStationLargeIcon,
 } from "~/components/icons/workplace-icons";
 import {
   BluelightDescription,
@@ -20,7 +17,6 @@ import {
   HodlTreeDescription,
   IzzzioDescription,
   MyOwnDescription,
-  NoDescriptionYet,
   SvoiDescription,
   TokenstationDescription,
   VniinsDescription,
@@ -55,19 +51,18 @@ import {
 import React from "react";
 
 export type JobDescription = {
-  icon: () => React.ReactNode;
-  largeIcon: () => React.ReactNode;
+  icon: ({ variant }: { variant: IconVariant }) => React.ReactNode;
   position: string;
   startDate: Date;
   endDate?: Date;
   description: () => React.ReactNode;
   stack: (() => React.ReactNode)[];
+  link?: string;
 };
 
 export const jobs: Record<JobsEnum, JobDescription | undefined> = {
-  Futurestate: {
-    icon: NoWorkplaceIcon,
-    largeIcon: NoWorkplaceLargeIcon,
+  Statecraft: {
+    icon: StatecraftIcon,
     position: "Blockchain developer",
     startDate: new Date("2024-03-01"),
     description: FuturestateDescription,
@@ -82,36 +77,36 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
       UbuntuIcon,
       GitLabIcon,
     ],
+    link: "https://statecraft.tech/",
   },
   HodlTree: {
     icon: HodlTreeIcon,
-    largeIcon: HodlTreeLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2022-01"),
     endDate: new Date("2022-05"),
     description: HodlTreeDescription,
     stack: [EthereumIcon, SolidityIcon, HardhatIcon, GithubIcon],
+    link: "https://hodltree.io/",
   },
   IZZZIO: {
     icon: IzzzioIcon,
-    largeIcon: IzzzioLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2020-03"),
     endDate: new Date("2020-06"),
     description: IzzzioDescription,
     stack: [NodeJSIcon, BashIcon, GithubIcon],
+    link: "https://github.com/Izzzio/izzzio",
   },
   MyOwn: {
-    icon: NoWorkplaceIcon,
-    largeIcon: NoWorkplaceLargeIcon,
+    icon: MeWorkplaceIcon,
     position: "CEO & CTO & The one and only employee",
     startDate: new Date("1999-09-23"),
     description: MyOwnDescription,
     stack: [],
+    link: "https://t.me/Pafaul",
   },
   SVOIdev: {
     icon: SvoiIcon,
-    largeIcon: SvoiLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2020-09"),
     endDate: new Date("2022-02"),
@@ -124,10 +119,10 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
       UbuntuIcon,
       GithubIcon,
     ],
+    link: "https://svoi.dev/",
   },
   Tokenstation: {
     icon: TokenStationIcon,
-    largeIcon: TokenStationLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2021-09"),
     endDate: new Date("2024-01"),
@@ -144,10 +139,10 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
       UbuntuIcon,
       GithubIcon,
     ],
+    link: "https://tokenstation.dev/",
   },
   Bluelight: {
     icon: BluelightIcon,
-    largeIcon: BluelightLargeIcon,
     position: "Blockchain developer",
     startDate: new Date("2022-11-25"),
     endDate: new Date("2024-02-29"),
@@ -170,10 +165,10 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
       UbuntuIcon,
       BitBucketIcon,
     ],
+    link: "https://bluelight.inc/",
   },
   Vniins: {
     icon: NoWorkplaceIcon,
-    largeIcon: NoWorkplaceLargeIcon,
     position: "DevOps engineer",
     startDate: new Date("2018-12"),
     endDate: new Date("2022-06"),

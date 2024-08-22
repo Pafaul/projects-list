@@ -24,7 +24,12 @@ export default function ShortInfoDescription({
   return (
     <Card>
       <CardBody className="flex flex-row items-center justify-center gap-3">
-        {jobInfo.largeIcon()}
+        {jobInfo.link && (
+          <a href={jobInfo.link} target={"_blank"}>
+            {jobInfo.icon({ variant: "large" })}
+          </a>
+        )}
+        {!jobInfo.link && <>{jobInfo.icon({ variant: "large" })}</>}
         <div className="pr-5" />
 
         <div className="flex flex-col items-center justify-center">
