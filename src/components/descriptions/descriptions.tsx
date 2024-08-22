@@ -42,6 +42,7 @@ export function MyOwnDescription() {
           <CardHeader>
             <h1>This website :)</h1>
           </CardHeader>
+          <Divider />
           <CardBody>
             <p>
               This page is the second version of the page where I collect
@@ -53,6 +54,7 @@ export function MyOwnDescription() {
           <CardHeader>
             <h1>Learning projects</h1>
           </CardHeader>
+          <Divider />
           <CardBody>
             <p>
               Until recently most of the projects that I was a part of required
@@ -77,6 +79,7 @@ export function MyOwnDescription() {
           <CardHeader>
             <h1>Huff hackathon 2023</h1>
           </CardHeader>
+          <Divider />
           <CardBody>
             <p>
               This one is cool one, because it allowed me to get better with EVM
@@ -125,6 +128,7 @@ export function MyOwnDescription() {
           <CardHeader>
             <h1>Snake in GO</h1>
           </CardHeader>
+          <Divider />
           <CardBody>
             <p>What can you build to learn some new language? Snake game</p>
           </CardBody>
@@ -133,6 +137,7 @@ export function MyOwnDescription() {
           <CardHeader>
             <h1>Event gathering service in GO</h1>
           </CardHeader>
+          <Divider />
           <CardHeader>
             <p>
               I decided to start learning Go, the first idea for a backend
@@ -144,6 +149,7 @@ export function MyOwnDescription() {
           <CardHeader>
             <h1>Http service monitor with Telegram notifications</h1>
           </CardHeader>
+          <Divider />
           <CardBody>
             <p>
               The idea was to create a generic solution for monitoring http
