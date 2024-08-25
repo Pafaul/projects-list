@@ -11,6 +11,7 @@ export default function BaseIcon({
   alt: string;
   w: number;
   h: number;
+  className?: string;
 }) {
   return (
     <Image

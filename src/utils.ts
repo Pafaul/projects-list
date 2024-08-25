@@ -13,7 +13,7 @@ export function dateDelta(start: Date, finish?: Date) {
     finish = new Date();
   }
 
-  const delta = finish - start;
+  const delta = finish.getUTCDate() - start.getUTCDate();
   return new Date(delta);
 }
 

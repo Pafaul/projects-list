@@ -57,7 +57,7 @@ export type JobDescription = {
   endDate?: Date;
   description: () => React.ReactNode;
   stack: (() => React.ReactNode)[];
-  link?: string;
+  link: string;
 };
 
 export const jobs: Record<JobsEnum, JobDescription | undefined> = {
@@ -174,5 +174,6 @@ export const jobs: Record<JobsEnum, JobDescription | undefined> = {
     endDate: new Date("2022-06"),
     description: VniinsDescription,
     stack: [BashIcon, DockerIcon, DebianIcon],
+    link: "https://www.vniins.ru/",
   },
 };

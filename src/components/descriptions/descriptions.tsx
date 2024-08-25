@@ -239,9 +239,11 @@ export function FuturestateDescription() {
         </Card>
 
         <Card className="justify-center">
-          <CardHeader className="justify-center gap-3">
-            <h1>System for executing custom user actions</h1>
-          </CardHeader>
+          <div className="justify-center gap-3">
+            <CardHeader>
+              <h1>System for executing custom user actions</h1>
+            </CardHeader>
+          </div>
           <Divider />
           <CardBody>
             <ul className="list-disc pl-4">
@@ -259,9 +261,11 @@ export function FuturestateDescription() {
           </CardBody>
         </Card>
         <Card>
-          <CardHeader className="justify-center">
-            <h1>Deployment system for user's network states</h1>
-          </CardHeader>
+          <div className="justify-center">
+            <CardHeader>
+              <h1>Deployment system for user's network states</h1>
+            </CardHeader>
+          </div>
           <Divider />
           <CardBody>
             <ul className="list-disk pl-4">
@@ -278,9 +282,11 @@ export function FuturestateDescription() {
           </CardBody>
         </Card>
         <Card>
-          <CardHeader className="justify-center">
-            <h1>Extension system</h1>
-          </CardHeader>
+          <div className="justify-center">
+            <CardHeader>
+              <h1>Extension system</h1>
+            </CardHeader>
+          </div>
           <Divider />
           <CardBody>
             <ul className="list-disc pl-4">

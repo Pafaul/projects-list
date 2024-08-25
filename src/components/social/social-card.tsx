@@ -1,14 +1,11 @@
-import { undefined } from "zod";
 import {
   GithubIcon,
   GmailIcon,
   LinkedInIcon,
   TelegramIcon,
 } from "~/components/icons/social-icons";
-import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
-import { NoWorkplaceLargeIcon } from "~/components/icons/workplace-icons";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Button } from "@nextui-org/react";
-import Link from "next/link";
 
 export enum SocialEnum {
   Telegram = "Telegram",
@@ -43,15 +40,6 @@ const data: Record<SocialEnum, SocialInfo> = {
 
 export default function SocialCard({ social }: { social: SocialEnum }) {
   const info = data[social];
-  if (!info) {
-    return (
-      <Card>
-        <CardBody>
-          <NoWorkplaceLargeIcon />
-        </CardBody>
-      </Card>
-    );
-  }
 
   return (
     <Card>

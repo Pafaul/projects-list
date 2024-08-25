@@ -4,11 +4,14 @@ import Image from "next/image";
 import { jobs } from "~/components/workplace/data";
 import { dateDelta, dateToString, deltaStr } from "~/utils";
 import { Divider } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function ShortInfoDescription({
   workplace,
+  linkTo,
 }: {
   workplace: JobsEnum;
+  linkTo: string;
 }) {
   const jobInfo = jobs[workplace];
   if (!jobInfo) {
@@ -25,9 +28,9 @@ export default function ShortInfoDescription({
     <Card>
       <CardBody className="flex flex-row items-center justify-center gap-3">
         {jobInfo.link && (
-          <a href={jobInfo.link} target={"_blank"}>
+          <Link href={linkTo} scroll={true}>
             {jobInfo.icon({ variant: "large" })}
-          </a>
+          </Link>
         )}
         {!jobInfo.link && <>{jobInfo.icon({ variant: "large" })}</>}
         <div className="pr-5" />

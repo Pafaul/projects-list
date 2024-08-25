@@ -3,6 +3,7 @@ import { jobs } from "~/components/workplace/data";
 import { dateDelta, dateToString, deltaStr } from "~/utils";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Divider } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function WorkplaceInfo({ workplace }: { workplace: JobsEnum }) {
   const jobInfo = jobs[workplace];
@@ -18,7 +19,7 @@ export default function WorkplaceInfo({ workplace }: { workplace: JobsEnum }) {
   return (
     <Card>
       <CardHeader className="gap-3">
-        {jobInfo.icon({ variant: "medium" })}
+        <Link href={jobInfo.link}>{jobInfo.icon({ variant: "medium" })}</Link>
         <div className="flex flex-col gap-3">
           <h1>{workplace}</h1>
           <p>
